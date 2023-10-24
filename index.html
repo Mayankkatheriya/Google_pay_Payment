@@ -1,48 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Google Pay</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="start">
-            <div class="image">
-                <img src="./gpay-1.png" alt="">
-            </div>
-            <button class="pay-now">Pay Now</button>
+      <div class="start">
+        <div class="image">
+          <img src="./gpay-1.png" alt="" />
         </div>
-        <div class="payment">
-            <div class="nav">
-                <i class="fa-solid fa-chevron-left" id="back"></i>
-                <img src="./gpay logo.webp" alt="">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-            <form action="">
-                <div class="box">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" placeholder="Enter Name or Number" required>
-                </div>
-                <div class="box">
-                    <label for="amount">Amount:</label>
-                    <input type="number" id="amount" placeholder="Enter amount" min="1" step="0.01" required>
-                </div>
-                <button class="pay">pay</button>
-            </form>
-            <div class="result">
-                <img src="./success.png" alt="">
-                <h1 class="paid-amount">$500</h1>
-                <h3 class="status">Payment success</h3>
-                <p class = transaction>Transaction ID: <span class="id">2484354168135</span></p>
-                <h2>Paid to: <span class="reciever">mayank</span></h2>
-                <p class = "byapp">Paid using Google Pay</p>
-                <button class="reset" onclick="window.location.reload()">make other payment</button>
-            </div>
+        <button class="pay-now">Pay Now</button>
+      </div>
+      <div class="payment">
+        <div class="nav">
+          <i class="fa-solid fa-chevron-left" id="back"></i>
+          <img src="./gpay logo.webp" alt="" />
+          <i class="fa-solid fa-bars"></i>
         </div>
+        <form action="">
+          <div class="box">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter Name or Number"
+              required
+            />
+          </div>
+          <div class="box">
+            <label for="amount">Amount:</label>
+            <input
+              type="number"
+              id="amount"
+              placeholder="Enter amount"
+              min="1"
+              step="0.01"
+              required
+            />
+          </div>
+          <button class="pay">pay</button>
+        </form>
+        <div class="result"></div>
+        <div class="loader">
+          Payment processing...
+          <svg
+            width="60"
+            height="60"
+            viewBox="0 0 44 44"
+            xmlns="http://www.w3.org/2000/svg"
+            stroke="#fff"
+          >
+            <g fill="none" fill-rule="evenodd" stroke-width="2">
+              <circle cx="22" cy="22" r="1">
+                <animate
+                  attributeName="r"
+                  begin="0s"
+                  dur="1.8s"
+                  values="1; 20"
+                  calcMode="spline"
+                  keyTimes="0; 1"
+                  keySplines="0.165, 0.84, 0.44, 1"
+                  repeatCount="indefinite"
+                />
+                <animate
+                  attributeName="stroke-opacity"
+                  begin="0s"
+                  dur="1.8s"
+                  values="1; 0"
+                  calcMode="spline"
+                  keyTimes="0; 1"
+                  keySplines="0.3, 0.61, 0.355, 1"
+                  repeatCount="indefinite"
+                />
+              </circle>
+              <circle cx="22" cy="22" r="1">
+                <animate
+                  attributeName="r"
+                  begin="-0.9s"
+                  dur="1.8s"
+                  values="1; 20"
+                  calcMode="spline"
+                  keyTimes="0; 1"
+                  keySplines="0.165, 0.84, 0.44, 1"
+                  repeatCount="indefinite"
+                />
+                <animate
+                  attributeName="stroke-opacity"
+                  begin="-0.9s"
+                  dur="1.8s"
+                  values="1; 0"
+                  calcMode="spline"
+                  keyTimes="0; 1"
+                  keySplines="0.3, 0.61, 0.355, 1"
+                  repeatCount="indefinite"
+                />
+              </circle>
+            </g>
+          </svg>
+        </div>
+      </div>
     </div>
-    <script src="https://kit.fontawesome.com/08f45ad4dd.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/08f45ad4dd.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
